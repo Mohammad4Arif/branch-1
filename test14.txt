@@ -387,3 +387,28 @@ nothing to commit, working tree clean
 
 arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
 $
+
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch
+  branch-2
+  branch-3
+* main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch B4
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch
+  B4
+  branch-2
+  branch-3
+* main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git checkout B4
+Switched to branch 'B4'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$
+
