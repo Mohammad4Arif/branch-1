@@ -1,0 +1,515 @@
+arif4@MOHAMMAD-ARIF MINGW64 /d/git
+$ git clone https://github.com/Mohammad4Arif/branch-1.git
+Cloning into 'branch-1'...
+warning: You appear to have cloned an empty repository.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git
+$ ls
+branch-1/  gitlearn/  mastergit/
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git
+$ cd branch-1
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ ls
+'test 1.txt'  'test 2.txt'  'test 3.txt'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test 1.txt
+        test 2.txt
+        test 3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git add .
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test 1.txt
+        new file:   test 2.txt
+        new file:   test 3.txt
+
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git commit -m "add my files test123"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'arif4@MOHAMMAD-ARIF.(none)')
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git config --global user.email "arif4toastmaster@gmail.com"
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git config --global user.name "Mohammad4Arif"
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git commit -m "add my files test 1,2,3"
+[main (root-commit) d215f4e] add my files test 1,2,3
+ 3 files changed, 3 insertions(+)
+ create mode 100644 test 1.txt
+ create mode 100644 test 2.txt
+ create mode 100644 test 3.txt
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 327 bytes | 327.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Mohammad4Arif/branch-1.git
+ * [new branch]      main -> main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git push origin main
+Everything up-to-date
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch branch 2
+fatal: not a valid object name: '2'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch-2
+git: 'branch-2' is not a git command. See 'git --help'.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch branch-2
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch
+  branch-2
+* main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git checkout branch 2
+error: pathspec 'branch' did not match any file(s) known to git
+error: pathspec '2' did not match any file(s) known to git
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git checkout branch-2
+Switched to branch 'branch-2'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ ls
+'test 1.txt'  'test 3.txt'  'test 5.txt'
+'test 2.txt'  'test 4.txt'  'test 6.txt'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git status
+On branch branch-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test 4.txt
+        test 5.txt
+        test 6.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git add .
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git status
+On branch branch-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test 4.txt
+        new file:   test 5.txt
+        new file:   test 6.txt
+
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git commit -m "add my files test 4,5,6"
+[branch-2 d8f1f88] add my files test 4,5,6
+ 3 files changed, 3 insertions(+)
+ create mode 100644 test 4.txt
+ create mode 100644 test 5.txt
+ create mode 100644 test 6.txt
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git status
+On branch branch-2
+nothing to commit, working tree clean
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git push origin branch-2
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 431 bytes | 431.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch-2' on GitHub by visiting:
+remote:      https://github.com/Mohammad4Arif/branch-1/pull/new/branch-2
+remote:
+To https://github.com/Mohammad4Arif/branch-1.git
+ * [new branch]      branch-2 -> branch-2
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git pull origin branch-2
+From https://github.com/Mohammad4Arif/branch-1
+ * branch            branch-2   -> FETCH_HEAD
+Already up to date.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ ls
+'test 1.txt'  'test 3.txt'  'test 5.txt'
+'test 2.txt'  'test 4.txt'  'test 6.txt'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test 7.txt
+        test 8.txt
+        test 9.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git add .
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test 7.txt
+        new file:   test 8.txt
+        new file:   test 9.txt
+
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git commit -m "add my test files 7,8,9"
+[main 5ff7e79] add my test files 7,8,9
+ 3 files changed, 3 insertions(+)
+ create mode 100644 test 7.txt
+ create mode 100644 test 8.txt
+ create mode 100644 test 9.txt
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 435 bytes | 435.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Mohammad4Arif/branch-1.git
+   d215f4e..5ff7e79  main -> main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git pull origin main
+From https://github.com/Mohammad4Arif/branch-1
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch
+  branch-2
+* main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch branch-3
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch
+  branch-2
+  branch-3
+* main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git checkout branch-3
+Switched to branch 'branch-3'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git status
+On branch branch-3
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test 10.txt
+        test 11.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git add .
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git status
+On branch branch-3
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test 10.txt
+        new file:   test 11.txt
+
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git commit -m "add my test files 10,11"
+[branch-3 b5c465b] add my test files 10,11
+ 2 files changed, 2 insertions(+)
+ create mode 100644 test 10.txt
+ create mode 100644 test 11.txt
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git push origin branch-3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 345 bytes | 345.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch-3' on GitHub by visiting:
+remote:      https://github.com/Mohammad4Arif/branch-1/pull/new/branch-3
+remote:
+To https://github.com/Mohammad4Arif/branch-1.git
+ * [new branch]      branch-3 -> branch-3
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git pull origin branch-3
+From https://github.com/Mohammad4Arif/branch-1
+ * branch            branch-3   -> FETCH_HEAD
+Already up to date.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ ls
+'test 1.txt'   'test 13.txt'  'test 3.txt'  'test 8.txt'
+'test 12.txt'  'test 2.txt'   'test 7.txt'  'test 9.txt'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test 12.txt
+        test 13.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git add .
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test 12.txt
+        new file:   test 13.txt
+
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git commit -m "add my test files 12,13"
+[main 94b2a33] add my test files 12,13
+ 2 files changed, 2 insertions(+)
+ create mode 100644 test 12.txt
+ create mode 100644 test 13.txt
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 340 bytes | 340.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Mohammad4Arif/branch-1.git
+   5ff7e79..94b2a33  main -> main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git pull origin main
+From https://github.com/Mohammad4Arif/branch-1
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$
+
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch
+  branch-2
+  branch-3
+* main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch B4
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git branch
+  B4
+  branch-2
+  branch-3
+* main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git checkout B4
+Switched to branch 'B4'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (main)
+$ git checkout B4
+Switched to branch 'B4'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git status
+On branch B4
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test 15.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git add .
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git commit -m "delete this branch"
+[B4 a35ff2f] delete this branch
+ 2 files changed, 26 insertions(+)
+ create mode 100644 test 15.txt
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git push origin B4
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 393 bytes | 393.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'B4' on GitHub by visiting:
+remote:      https://github.com/Mohammad4Arif/branch-1/pull/new/B4
+remote:
+To https://github.com/Mohammad4Arif/branch-1.git
+ * [new branch]      B4 -> B4
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git pull origin B4
+From https://github.com/Mohammad4Arif/branch-1
+ * branch            B4         -> FETCH_HEAD
+Already up to date.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git pull origin B4
+From https://github.com/Mohammad4Arif/branch-1
+ * branch            B4         -> FETCH_HEAD
+Already up to date.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git branch -d B4
+error: Cannot delete branch 'B4' checked out at 'D:/git/branch-1'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        test14.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git branch
+* B4
+  branch-2
+  branch-3
+  main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git branch checkout main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git branch -d "checkout main"
+error: branch 'checkout main' not found.
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git branch
+* B4
+  branch-2
+  branch-3
+  checkout
+  main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git branch -d checkout
+Deleted branch checkout (was c3f7269).
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$ git branch
+* B4
+  branch-2
+  branch-3
+  main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
+$
+
+
+
