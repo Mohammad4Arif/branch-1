@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 my name is arif 
+=======
+my name is arif xyz
+>>>>>>> b6
