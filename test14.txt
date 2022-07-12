@@ -534,5 +534,61 @@ Merge made by the 'ort' strategy.
 arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
 $
 
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git branch
+  B4
+  branch-2
+* branch-3
+  main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git checkout branch-2
+error: Your local changes to the following files would be overwritten by checkout:
+        test14.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git add .
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git checkout branch-2
+error: Your local changes to the following files would be overwritten by checkout:
+        test14.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git commit -m "commit your changes"
+[branch-3 faf885d] commit your changes
+ 1 file changed, 23 insertions(+)
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git checkout branch-2
+Switched to branch 'branch-2'
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-2)
+$ git merge branch-3
+Merge made by the 'ort' strategy.
+ test 10.txt |   1 +
+ test 11.txt |   1 +
+ test 12.txt |   1 +
+ test 13.txt |   1 +
+ test 15.txt |   1 +
+ test 7.txt  |   1 +
+ test 8.txt  |   1 +
+ test 9.txt  |   1 +
+ test14.txt  | 538 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 546 insertions(+)
+ create mode 100644 test 10.txt
+ create mode 100644 test 11.txt
+ create mode 100644 test 12.txt
+ create mode 100644 test 13.txt
+ create mode 100644 test 15.txt
+ create mode 100644 test 7.txt
+ create mode 100644 test 8.txt
+ create mode 100644 test 9.txt
+ create mode 100644 test14.txt
+
 
 
