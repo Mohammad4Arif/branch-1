@@ -511,5 +511,28 @@ $ git branch
 arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (B4)
 $
 
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git branch
+  B4
+  branch-2
+* branch-3
+  main
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$ git merge B4
+Merge made by the 'ort' strategy.
+ test 12.txt |   1 +
+ test 13.txt |   1 +
+ test 15.txt |   1 +
+ test14.txt  | 515 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 518 insertions(+)
+ create mode 100644 test 12.txt
+ create mode 100644 test 13.txt
+ create mode 100644 test 15.txt
+ create mode 100644 test14.txt
+
+arif4@MOHAMMAD-ARIF MINGW64 /d/git/branch-1 (branch-3)
+$
+
 
 
